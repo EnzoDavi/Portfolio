@@ -220,6 +220,10 @@ h1, h2, h3, p, ul { margin: 0; }
 .section-block.alt { background: var(--paper); }
 .section-inner { max-width: var(--maxw); margin: 0 auto; }
 
+/* Only matches the project-detail pages, where .section-inner sits directly
+   under <main> (on index.html it's always nested inside .section-block) */
+main > .section-inner { padding: 72px 24px 104px; }
+
 /* ---------- Molduras de mídia (foto / imagem de projeto) com placeholder ---------- */
 
 .media-frame {
@@ -229,7 +233,8 @@ h1, h2, h3, p, ul { margin: 0; }
   border: 1px solid var(--line);
 }
 
-.media-frame img {
+.media-frame img,
+.media-frame video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -356,10 +361,28 @@ h1, h2, h3, p, ul { margin: 0; }
 
 .project-hero-image { aspect-ratio: 16 / 7; margin-bottom: 48px; }
 
-.project-detail-section { margin-bottom: 56px; max-width: 720px; }
-.project-detail-section:last-child { margin-bottom: 0; }
+.hero .project-tags { margin-top: 18px; }
 
-.project-detail-section h2 {
+.hero .tag {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.project-detail-section,
+.project-media-section {
+  margin-bottom: 56px;
+}
+
+.project-detail-section:last-child,
+.project-media-section:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail-section { max-width: 720px; }
+
+.project-detail-section h2,
+.project-media-section h2 {
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 14px;
@@ -368,6 +391,40 @@ h1, h2, h3, p, ul { margin: 0; }
 }
 
 .project-detail-section p { color: var(--slate); }
+
+/* Galeria de imagens/vídeos do projeto — mostra a mídia inteira (sem
+   recortar), diferente das molduras quadradas usadas nos cartões de
+   pré-visualização. */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.gallery-item {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.gallery-item img,
+.gallery-item video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-caption {
+  margin: 0;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--white);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--slate);
+}
 
 .stack-list {
   list-style: none;

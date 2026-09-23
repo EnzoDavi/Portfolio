@@ -13,7 +13,7 @@
 
 <header class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="brand"></a>
+    <a href="../index.html" class="brand"></a>
     <a href="../index.html#projetos" class="back-link-nav">Voltar aos projetos</a>
   </div>
 </header>
@@ -23,6 +23,11 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>Sistema de Alarme para Tomada Veicular</h1>
+      <div class="project-tags">
+        <span class="tag">Eletrônica</span>
+        <span class="tag">Firmware</span>
+        <span class="tag">IoT</span>
+      </div>
     </div>
   </section>
 
@@ -31,44 +36,39 @@
 
     <section class="project-detail-section">
       <h2>Problema / motivação</h2>
-      <p>No primeiro semestre de 2026, um cliente, dono de uma empresa de tomada veicular, veio até a ENETEC se queixando dos frequentes roubos nas maqueiras das estações de recarga e propôs um projeto de um sistema de uma proteção que consistiria em uma cabo fino que passasse ao redor da mangueira que ao ser rompido acionaria um alarme antes de qualquer um conseguir levar o cobre da mangueira.</p>
+      <p>No primeiro semestre de 2026, um cliente, dono de uma empresa de tomada veicular, veio até a ENETEC se queixando dos frequentes roubos nas mangueiras das estações de recarga e propôs um projeto de sistema de proteção que consistiria em um cabo fino que passasse ao redor da mangueira e que, ao ser rompido, acionaria um alarme antes de qualquer um conseguir levar o cobre da mangueira.</p>
     </section>
 
     <section class="project-detail-section">
       <h2>Processo</h2>
-      <p>Com o problema e a ideia geral bem definida, foi se utilizado o microprocessador ESP32 como centro desse projeto que além de cumprir com o objetivo principal, optamos por alavancar o projeto para que além de soar o alarme, ele também notificasse quando via SMS o celular do dono quando houvesse um rompimento do cabo.</p>
+      <p>Com o problema e a ideia geral bem definidos, utilizamos o microprocessador ESP32 como centro do projeto e, além de cumprir o objetivo principal, optamos por expandir o projeto para que, além de soar o alarme, ele também notificasse via SMS o celular do dono quando houvesse um rompimento do cabo.</p>
     </section>
 
     <section class="project-detail-section">
       <h2>Resultado</h2>
-      <p>O resultado foi um cliente satisfeito com um projeto, propondo inclusive adições extras no projeto antes de coloca-lo em operação.</p>
+      <p>O resultado foi um cliente satisfeito com o projeto, propondo inclusive adições extras antes de colocá-lo em operação.</p>
     </section>
 
-    <section>
-      <div class="media-frame photo-frame">
-          <video width="640" height="360" controls>
-          <source src="../assets/VideoPrototipo.mp4" type="video/mp4">
-          Seu navegador não suporta a tag de vídeo.
-        </video>
-        <div class="media-frame photo-frame">
-          <img src="../assets/AlarmeTVeicular.jpg" alt="Sua foto" onerror="this.style.display='none'">
-          <span class="placeholder-label">Foto prototipo</span>
-        </div>
-    </section>
-
-    <section class="project-detail-section">
-      <h2>Stack</h2>
-      <ul class="stack-list">
-        <li>ESP32</li>
-        <li>C++ / Arduino</li>
-        <li>TP4056</li>
-        <li>LDO (HT7333/ME6211)</li>
-      </ul>
+    <section class="project-media-section">
+      <h2>Imagens do projeto</h2>
+      <div class="project-gallery">
+        <figure class="gallery-item">
+          <video controls>
+            <source src="../assets/VideoPrototipo.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+          <figcaption class="gallery-caption">Protótipo em funcionamento</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/AlarmeTVeicular.jpg" alt="Foto do protótipo do alarme para tomada veicular">
+          <figcaption class="gallery-caption">Foto do protótipo</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="project-detail-section">
       <h2>Link do projeto</h2>
-      <p><a href="https://github.com/ENETEC-automacoes/2614" target="_blank" rel="noopener">Link repositorio do projeto no Github</a></p>
+      <p><a href="https://github.com/ENETEC-automacoes/2614" target="_blank" rel="noopener">Link do repositório do projeto no GitHub</a></p>
     </section>
 
   </div>
